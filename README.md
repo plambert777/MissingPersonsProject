@@ -1,5 +1,5 @@
 # Welcome to our Missing Persons Project!!
-This project was created as for a Data Wrangling class at Dartmouth
+This project was created as for a Data Wrangling assignment at Dartmouth
 ## Colaborators and our Links:
 <details>
   <summary>Parker Lambert</summary>
