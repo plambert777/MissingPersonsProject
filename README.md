@@ -12,8 +12,8 @@ This project was created as for a Data Wrangling assignment at Dartmouth
   <p><a href="https://www.linkedin.com/in/riyamehta18/" target="_blank">LinkedIn</a></p>
 </details>
 <details>
-  <summary>Sai P Lakkireddy</summary>
-  <p><a href="">Github</a></p>
+  <summary>Sai Priya Lakkireddy</summary>
+  <p><a href="https://github.com/saipriya0209">Github</a></p>
   <p><a href="https://www.linkedin.com/in/sai-priya-lakkireddy-sp/" target="_blank">LinkedIn</a></p>
 </details>
 
