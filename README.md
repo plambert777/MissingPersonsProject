@@ -3,7 +3,7 @@ This project was created as for a Data Wrangling class at Dartmouth
 ## Colaborators :
 <details>
   <summary>Parker Lambert</summary>
-  <p>Content 1 Content 1 Content 1 Content 1 Content 1</p>
+  <p><a href="https://github.com/plambert777">Github</a></p>
 </details>
 <details>
   <summary>Riya Mehta</summary>
