@@ -1,5 +1,7 @@
 # Welcome to our Missing Persons Project!!
 This project was created for a Data Wrangling assignment at Dartmouth
+## Link to our website
+[Missing Persons Project Website](https://plambert777.github.io/MissingPersonsProject/index.html)
 ## Colaborators and our Links:
 <details>
   <summary>Parker Lambert</summary>
