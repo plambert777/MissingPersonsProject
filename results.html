@@ -78,21 +78,7 @@
     <script>
       fetch('results.csv')
           .then(response => response.text())
-          .then(text => {
-              console.log("CSV file content:", text);  // Log the content of the CSV file
-              const rows = text.split('\n');
-              console.log("CSV rows:", rows);  // Log the rows extracted from the CSV file
-              const titles = rows.slice(0, 11); // Extract top 10 titles
-              console.log("Titles extracted:", titles);  // Log the extracted titles
-      
-              const titlesContainer = document.getElementById('titles-container');
-              titles.forEach(title => {
-                  const box = document.createElement('div');
-                  box.classList.add('box');
-                  box.textContent = title; // 'Title' might need adjustment based on the CSV structure
-                  titlesContainer.appendChild(box);
-              });
-          })
+          .then(text => console.log("one step"))
           .catch(error => console.error('Error fetching data:', error));
 
     </script>
