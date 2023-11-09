@@ -52,6 +52,10 @@
       <div id="titles-container" class="titles">
         <!-- Titles will be displayed here -->
       </div>
+
+    <div class="grid-container" id="titles-container">
+        <!-- Titles will be inserted here -->
+    </div>
     </main>
     <footer>
       <!-- <h3>Parker Lambert Links -></h3> -->
@@ -76,27 +80,41 @@
       </section>
     </footer>
     <script>
-fetch('results.csv')
-    .then(response => response.text())
-    .then(text => {
-        console.log("CSV file content:", text);  // Log the content of the CSV file
-        const rows = text.split('\n').slice(1, 11);
-        console.log("CSV rows:", rows);  // Log the rows extracted from the CSV file
-        const titles = rows.map(row => {
-            const columns = row.split(','); // Assuming CSV is comma-separated
-            return columns[0].replace(/\n/g, ''); // Adjust the index if the 'Title' column is not the first column (index 0)
-        });
-        console.log("Titles extracted:", titles);  // Log the extracted titles
+document.addEventListener('DOMContentLoaded', function() {
+    fetch('results.csv')
+        .then(response => response.text())
+        .then(text => {
+            const rows = text.split('\n').slice(1, 11); // Extract top 10 rows excluding the header
+            const titles = rows.map(row => {
+                const columns = row.split(','); // Adjust if the 'Title' column is at a different index
+                return columns[0].replace(/\n/g, ''); // Remove newline characters
+            });
 
-        const titlesContainer = document.getElementById('titles-container');
-        titles.forEach(title => {
-            const box = document.createElement('div');
-            box.classList.add('box');
-            box.textContent = title; // Display the 'Title' column
-            titlesContainer.appendChild(box);
-        });
-    })
-    .catch(error => console.error('Error fetching data:', error));
+            const titlesContainer = document.getElementById('titles-container');
+            titles.forEach(title => {
+                const box = document.createElement('div');
+                box.classList.add('box');
+                box.textContent = title;
+                titlesContainer.appendChild(box);
+            });
+
+            formatGrid();
+        })
+        .catch(error => console.error('Error fetching data:', error));
+});
+
+function formatGrid() {
+    const boxes = document.querySelectorAll('.box');
+    const numRows = 5;
+    const numColumns = 2;
+    
+    boxes.forEach((box, index) => {
+        const row = Math.floor(index / numColumns);
+        const column = index % numColumns;
+        box.style.gridRow = row + 1;
+        box.style.gridColumn = column + 1;
+    });
+}
     </script>
     <script src="script.js" async defer></script>
   </body>
