@@ -84,7 +84,7 @@ fetch('results.csv')
         console.log("CSV rows:", rows);  // Log the rows extracted from the CSV file
         const titles = rows.map(row => {
             const columns = row.split(','); // Assuming CSV is comma-separated
-            return columns[0]; // Adjust the index if the 'Title' column is not the first column (index 0)
+            return columns[0].replace(/\n/g, ''); // Adjust the index if the 'Title' column is not the first column (index 0)
         });
         console.log("Titles extracted:", titles);  // Log the extracted titles
 
