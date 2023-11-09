@@ -1,15 +1,15 @@
 # Welcome to our Missing Persons Project!!
-This project was created for a Data Wrangling assignment at Dartmouth
+This project was created for a Data Wrangling assignment at Dartmouth.
 ## Link to our website
 [Missing Persons Project Website](https://plambert777.github.io/MissingPersonsProject/index.html)
 ## Folder Breakdown
-All website files are in the main
+All website files are in the main.
 ### code
-The code folder holds all our code used for making the graphs and webscrape
+The code folder holds all our code used for making the graphs and webscrape.
 ### plots
-The plots folder holds all our plotly interactive maps created in R
+The plots folder holds all our plotly interactive maps created in R.
 ### img
-The img folder holds all our images used for the website
+The img folder holds all our images used for the website.
 ## Colaborators and our Links:
 <details>
   <summary>Parker Lambert</summary>
