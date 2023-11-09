@@ -80,7 +80,7 @@ fetch('results.csv')
     .then(response => response.text())
     .then(text => {
         console.log("CSV file content:", text);  // Log the content of the CSV file
-        const rows = text.split('\n');
+        const rows = text.split('\n').slice(1, 11);
         console.log("CSV rows:", rows);  // Log the rows extracted from the CSV file
         const titles = rows.map(row => {
             const columns = row.split(','); // Assuming CSV is comma-separated
