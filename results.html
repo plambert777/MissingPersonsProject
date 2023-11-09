@@ -59,7 +59,7 @@
         While the News API tries to filter the sources based on the given phrases, many articles that were obtained sometimes did not have anything to do with a person missing. For Example, in our first iteration we obtained articles related to legal bills being passed about missing people. To filter out articles as best as we can from the given results, we used a Sentance Transformer from HuggingFace that was trained on article data (CNN to be specific). It looks for cosine similarity between sentances and retuns a value indicating the sematic similarity. We then sorted the headlines to get the top 10 articles with content similar to "A Person is Missing"
       </h1>
       <h1 class="welcome">Top 10 News Headlines about Missing Persons from NewsAPI</h1>
-    <div class="grid-container" id="titles-container">
+    <div class="paragraph" id="titles-container">
         <!-- Titles will be inserted here -->
     </div>
     </main>
