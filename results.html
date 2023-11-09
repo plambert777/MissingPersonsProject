@@ -46,22 +46,45 @@
       </nav>
     </header>
     <main>
-      <h1 class="welcome">
-        Web Scraping for Missing People articles
-      </h1>
+      <h1 class="welcome">Web Scraping for Missing People articles</h1>
+      <img
+        src="img/process_graph.png"
+        alt="profile"
+        class="youtube"
+        width="85%"
+      /></a>
       <h1 class="welcome">NewsAPI</h1>
       <h1 class="paragraph">
-        Utilizing a News Articles API that aggregates comprehensive information and descriptions from various online sources, we accessed the API by implementing a specific parameter containing targeted keywords such as "Missing Person," "Missing Child," "Unsolved Disappearance," "Amber Alert," "Human Trafficking," "Family Appeals," and "Vanishing Without a Trace." The API query was limited to articles published within the last 29 days.
+        Utilizing a News Articles API that aggregates comprehensive information
+        and descriptions from various online sources, we accessed the API by
+        implementing a specific parameter containing targeted keywords such as
+        "Missing Person," "Missing Child," "Unsolved Disappearance," "Amber
+        Alert," "Human Trafficking," "Family Appeals," and "Vanishing Without a
+        Trace." The API query was limited to articles published within the last
+        29 days.
       </h1>
 
       <h1 class="welcome">Filtering the Web Articles</h1>
       <h1 class="paragraph">
-        While the News API tries to filter the sources based on the given phrases, many articles that were obtained sometimes did not have anything to do with a person missing. For Example, in our first iteration we obtained articles related to legal bills being passed about missing people. To filter out articles as best as we can from the given results, we used a Sentance Transformer from HuggingFace that was trained on article data (CNN to be specific). It looks for cosine similarity between sentances and retuns a value indicating the sematic similarity. We then sorted the headlines to get the top 10 articles with content similar to "A Person is Missing"
+        While the News API tries to filter the sources based on the given
+        phrases, many articles that were obtained sometimes did not have
+        anything to do with a person missing. For Example, in our first
+        iteration we obtained articles related to legal bills being passed about
+        missing people. To filter out articles as best as we can from the given
+        results, we used a Sentance Transformer from HuggingFace that was
+        trained on article data (CNN to be specific). It looks for cosine
+        similarity between sentances and retuns a value indicating the sematic
+        similarity. We then sorted the headlines to get the top 10 articles with
+        content similar to "A Person is Missing"
       </h1>
-      <h1 class="welcome">Top 10 News Headlines about Missing Persons from NewsAPI</h1>
-    <div class="paragraph" id="titles-container">
+      <h1 class="welcome">
+        Top 10 News Headlines about Missing Persons from NewsAPI
+      </h1>
+      <div class="paragraph" id="titles-container">
         <!-- Titles will be inserted here -->
-    </div>
+      </div>
+      <h1 class="paragraph"></h1>
+      <h1 class="paragraph"></h1>
     </main>
     <footer>
       <!-- <h3>Parker Lambert Links -></h3> -->
@@ -86,42 +109,41 @@
       </section>
     </footer>
     <script>
-document.addEventListener('DOMContentLoaded', function() {
-    fetch('results.csv')
-        .then(response => response.text())
-        .then(text => {
-            const rows = text.split('\n').slice(1, 11); // Extract top 10 rows excluding the header
-            const titles = rows.map(row => {
-                const columns = row.split(','); // Adjust if the 'Title' column is at a different index
-                return columns[0].replace(/\n/g, ''); // Remove newline characters
+      document.addEventListener("DOMContentLoaded", function () {
+        fetch("results.csv")
+          .then((response) => response.text())
+          .then((text) => {
+            const rows = text.split("\n").slice(1, 11); // Extract top 10 rows excluding the header
+            const titles = rows.map((row) => {
+              const columns = row.split(","); // Adjust if the 'Title' column is at a different index
+              return columns[0].replace(/\n/g, ""); // Remove newline characters
             });
 
-            const titlesContainer = document.getElementById('titles-container');
-            titles.forEach(title => {
-                const box = document.createElement('div');
-                box.classList.add('paragraph');
-                box.textContent = title;
-                titlesContainer.appendChild(box);
+            const titlesContainer = document.getElementById("titles-container");
+            titles.forEach((title) => {
+              const box = document.createElement("div");
+              box.classList.add("paragraph");
+              box.textContent = title;
+              titlesContainer.appendChild(box);
             });
 
             setTimeout(formatGrid, 100); // Apply grid styling after a short delay
-        })
-        .catch(error => console.error('Error fetching data:', error));
-});
+          })
+          .catch((error) => console.error("Error fetching data:", error));
+      });
 
-function formatGrid() {
-    const boxes = document.querySelectorAll('.box');
-    const numRows = 5;
-    const numColumns = 2;
+      function formatGrid() {
+        const boxes = document.querySelectorAll(".box");
+        const numRows = 5;
+        const numColumns = 2;
 
-    boxes.forEach((box, index) => {
-        const row = Math.floor(index / numColumns) + 1;
-        const column = (index % numColumns) + 1;
-        box.style.gridRow = row;
-        box.style.gridColumn = column;
-    });
-}
-
+        boxes.forEach((box, index) => {
+          const row = Math.floor(index / numColumns) + 1;
+          const column = (index % numColumns) + 1;
+          box.style.gridRow = row;
+          box.style.gridColumn = column;
+        });
+      }
     </script>
     <script src="script.js" async defer></script>
   </body>
