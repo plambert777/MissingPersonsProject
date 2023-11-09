@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -46,15 +47,11 @@
     </header>
     <main>
       <h1 class="welcome">
-        Results
+        Top 10 Titles
       </h1>
-      <h1 class="welcome">
-        Coming Soon
-      </h1>
-      
-
-      
-      </section>
+      <div id="titles-container" class="titles">
+        <!-- Titles will be displayed here -->
+      </div>
     </main>
     <footer>
       <!-- <h3>Parker Lambert Links -></h3> -->
@@ -78,6 +75,23 @@
         /></a> -->
       </section>
     </footer>
+    <script>
+        fetch('results.csv')
+            .then(response => response.text())
+            .then(text => {
+                const rows = text.split('\n');
+                const titles = rows.slice(0, 11); // Extract top 10 titles
+
+                const titlesContainer = document.getElementById('titles-container');
+                titles.forEach(title => {
+                    const box = document.createElement('div');
+                    box.classList.add('box');
+                    box.textContent = Title;
+                    titlesContainer.appendChild(box);
+                });
+            })
+            .catch(error => console.error('Error fetching data:', error));
+    </script>
     <script src="script.js" async defer></script>
   </body>
 </html>
