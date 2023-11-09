@@ -49,11 +49,7 @@
       <h1 class="welcome">
         Web Scraping for Missing People articles
       </h1>
-
-    <div class="grid-container" id="titles-container">
-        <!-- Titles will be inserted here -->
-    </div>
-      <h1 class="welcome">NewsAPI: Web Scraping</h1>
+      <h1 class="welcome">NewsAPI</h1>
       <h1 class="paragraph">
         Utilizing a News Articles API that aggregates comprehensive information and descriptions from various online sources, we accessed the API by implementing a specific parameter containing targeted keywords such as "Missing Person," "Missing Child," "Unsolved Disappearance," "Amber Alert," "Human Trafficking," "Family Appeals," and "Vanishing Without a Trace." The API query was limited to articles published within the last 29 days.
       </h1>
@@ -62,10 +58,10 @@
       <h1 class="paragraph">
         While the News API tries to filter the sources based on the given phrases, many articles that were obtained sometimes did not have anything to do with a person missing. For Example, in our first iteration we obtained articles related to legal bills being passed about missing people. To filter out articles as best as we can from the given results, we used a Sentance Transformer from HuggingFace that was trained on article data (CNN to be specific). It looks for cosine similarity between sentances and retuns a value indicating the sematic similarity. We then sorted the headlines to get the top 10 articles with content similar to "A Person is Missing"
       </h1>
-      <h1>Top 10 News Headlines about Missing Persons from NewsAPI</h1>
-        <div id="titles-container" class="titles">
-        <!-- Titles will be displayed here -->
-      </div>
+      <h1 class="welcome">Top 10 News Headlines about Missing Persons from NewsAPI</h1>
+    <div class="grid-container" id="titles-container">
+        <!-- Titles will be inserted here -->
+    </div>
     </main>
     <footer>
       <!-- <h3>Parker Lambert Links -></h3> -->
