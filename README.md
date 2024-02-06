@@ -1,8 +1,7 @@
 # Welcome to our Missing Persons Project!!
 This project was created as part of a Data Wrangling assignment at Dartmouth College.
 
-## Link to our website
-[Missing Persons Project Website](https://plambert777.github.io/MissingPersonsProject/index.html)
+### Visit our website here: [Missing Persons Project Website](https://plambert777.github.io/MissingPersonsProject/index.html)
 
 ## Project Overview
 ### Folder Breakdown
