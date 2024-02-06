@@ -1,15 +1,30 @@
 # Welcome to our Missing Persons Project!!
-This project was created for a Data Wrangling assignment at Dartmouth.
+This project was created as part of a Data Wrangling assignment at Dartmouth College.
+
 ## Link to our website
 [Missing Persons Project Website](https://plambert777.github.io/MissingPersonsProject/index.html)
-## Folder Breakdown
-All website files are in the main.
-### code
-The code folder holds all our code used for making the graphs and webscrape.
-### plots
-The plots folder holds all our plotly interactive maps created in R.
-### img
-The img folder holds all our images used for the website.
+
+## Project Overview
+### Folder Breakdown
+- **main:** All website files.
+- **code:** Code used for creating graphs and web scraping.
+- **plots:** Plotly interactive maps created in R.
+- **img:** Images used for the website.
+
+## Collaborators and Links
+
+- **Parker Lambert:**
+  - [Github](https://github.com/plambert777)
+  - [LinkedIn](https://www.linkedin.com/in/parkerjosephgreenlambert/)
+
+- **Riya Mehta:**
+  - [Github](https://github.com/riyamehta18)
+  - [LinkedIn](https://www.linkedin.com/in/riyamehta18/)
+
+- **Sai Priya Lakkireddy:**
+  - [Github](https://github.com/saipriya0209)
+  - [LinkedIn](https://www.linkedin.com/in/sai-priya-lakkireddy-sp/)
+  
 ## Colaborators and our Links:
 <details>
   <summary>Parker Lambert</summary>
