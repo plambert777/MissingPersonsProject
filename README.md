@@ -12,20 +12,6 @@ This project was created as part of a Data Wrangling assignment at Dartmouth Col
 - **img:** Images used for the website.
 
 ## Collaborators and Links
-
-- **Parker Lambert:**
-  - [Github](https://github.com/plambert777)
-  - [LinkedIn](https://www.linkedin.com/in/parkerjosephgreenlambert/)
-
-- **Riya Mehta:**
-  - [Github](https://github.com/riyamehta18)
-  - [LinkedIn](https://www.linkedin.com/in/riyamehta18/)
-
-- **Sai Priya Lakkireddy:**
-  - [Github](https://github.com/saipriya0209)
-  - [LinkedIn](https://www.linkedin.com/in/sai-priya-lakkireddy-sp/)
-  
-## Colaborators and our Links:
 <details>
   <summary>Parker Lambert</summary>
   <p><a href="https://github.com/plambert777" target="_blank">Github</a></p>
@@ -44,16 +30,17 @@ This project was created as part of a Data Wrangling assignment at Dartmouth Col
 
 ## Documentation
 
-### Data:
-1. Missing Persons data from National Missing and Unidentified Persons System (NAMUS): https://namus.nij.ojp.gov/
-State-Crime data from the Unified Crime Reporting Statistics and under the collaboration of the U.S. Department of Justice and the Federal Bureau of Investigation: https://corgis-edu.github.io/corgis/csv/state_crime/
-2. Substate Region Shapefile from Substrate Abuse and Mental Health Services Administration: https://www.samhsa.gov/data/report/2016-2018-nsduh-substate-region-shapefile
-3. GeoJSON boundary files for US counties and states: https://eric.clst.org/tech/usgeojson/
+### Data Sources:
+1. Missing Persons data from National Missing and Unidentified Persons System (NAMUS): [NAMUS](https://namus.nij.ojp.gov/)
+2. State-Crime data from Unified Crime Reporting Statistics: [U.S. Department of Justice](https://corgis-edu.github.io/corgis/csv/state_crime/)
+3. Substate Region Shapefile from Substance Abuse and Mental Health Services Administration: [SAMHSA](https://www.samhsa.gov/data/report/2016-2018-nsduh-substate-region-shapefile)
+4. GeoJSON boundary files for US counties and states: [US GeoJSON](https://eric.clst.org/tech/usgeojson/)
 
 ### Data Cleaning and Transformation
 We initiated a thorough data cleaning and transformation process for three datasets: missing_data, state_crime, and state_mapping. First, we standardized state names in each dataset for consistency, incorporating both abbreviations and full names. Utilizing the state_mapping dataframe, a left-join aligned state names between missing_data and state_crime. The "DLC" column in missing_data was parsed into month, date, and year. Following state mapping, NAs were removed from relevant columns to ensure data integrity. Substrate shapefile data (.dbf) was converted to .csv using R, maintaining cleanliness with both state abbreviations and full names. Cleaned datasets were exported (missing_data_cleaned.csv, substrate_data_cleaned.csv, and state_crime_cleaned.csv) for subsequent steps. Our decision to exclusively use R for cleaning, leveraging the tidyverse, enabled efficient data manipulation and integration of spatial data processing, a task unfeasible in Excel.
 
 We made a decision to employ all cleaning techniques within R rather than using a combination of Excel and R. This allowed us to leverage the tidyverse, which was helpful data manipulation, and to interact with shapefiles and integrate spatial data processing, which would not have been possible in Excel.
+
 
 ### Mapping and Visualizing Trends
 To visualize missing persons data, we created a choropleth map (missing_counts_tab) with counts per state, merging missing_final with state_mapping. We also incorporated mental health metrics from substrate_final, constructing averaged_mental_illness with average values grouped by state. Geographical data for cities was obtained using the Google Maps API, merging with missing_counts_cities for city-level visualization. Further analysis involved calculating missing persons per state and year, joining state_crime_final data, and focusing on 2016-2018 for visualizations. Average proportions of missing persons were computed, integrating mental health metrics and crime rates at the state level.
@@ -105,4 +92,3 @@ This methodology combines the application of web APIs and the efficiency of adva
 When determining how to showcase our results, we aimed for something more engaging than a traditional PowerPoint presentation. Ensuring our work remains easily accessible for potential employers on platforms like LinkedIn, we chose to host a website through GitHub. Figma, a collaborative design tool, played a pivotal role in shaping the website's visual identity before the coding process began. This approach facilitated collaborative design and prevented lazy coding, resulting in a more refined web design.
 
 Once the design was finalized, we reached a consensus on the pages to include: a landing page, an inspiration page, a latest headlines page, an about us page, and a results page. In terms of coding, HTML was employed for page elements, CSS added aesthetic appeal, and a bit of JavaScript enhanced mobile accessibility, although there are more optimizations in this area.
-
